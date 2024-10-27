@@ -1,10 +1,15 @@
+/* Global Styles */
 * {
   margin: 0;
-  background-color: #991637;
+  background-color: #991637; /* Updated background color for consistency */
 }
+
+/* Container Styles */
 .container {
   height: 100vh;
 }
+
+/* Events Section */
 .event {
   margin: auto;
   display: flex;
@@ -12,7 +17,10 @@
   align-items: center;
   padding-bottom: 3rem;
   max-width: 80rem;
+  font-family: "Inter", sans-serif; /* Added font family */
 }
+
+/* Images Section */
 .images {
   width: 300px;
   display: flex;
@@ -21,37 +29,46 @@
   align-items: center;
   cursor: pointer;
 }
+
+/* Flexbox for Event Items */
 .section {
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
   gap: 3rem;
 }
 
+/* Picture Styles */
 .picture {
   height: 300px;
   width: 300px;
   position: relative;
 }
 
+/* Header Styles */
 .header {
   font-size: 2.25rem;
   font-weight: bold;
-  color: #f5f5dc;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  color: #f5f5dc; /* Keep the header color consistent */
 }
+
+/* Label Styles */
 .label {
   font-size: 1.125rem;
   font-weight: bold;
-  color: white;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  color: white; /* Consistent text color for labels */
 }
+
+/* Image Styles */
 img {
   position: absolute;
   height: 100%;
   width: 100%;
   inset: 0;
+}
+
+/* Optional: Add smooth transition for image hover effects */
+.images:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out; /* Scale effect on hover */
 }
