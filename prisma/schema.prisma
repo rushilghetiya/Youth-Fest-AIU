@@ -3,19 +3,20 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")  // Use connection pooling for normal app interactions
+  directUrl = env("DIRECT_URL")    // Use direct connection for migrations
 }
 
 model User {
-  id    String  @id @default(uuid())
-  name  String
-  state String?
+  id             String           @id @default(uuid())
+  name           String
+  state          String?
 
-  username       String        @unique
+  username       String           @unique
   password       String
-  UserResponse   UserResponse? @relation(fields: [userResponseId], references: [id])
-  userResponseId String?       @unique
+  UserResponse   UserResponse?    @relation(fields: [userResponseId], references: [id])
+  userResponseId String?          @unique
 }
 
 enum TRAVEL_MODE {
@@ -25,30 +26,28 @@ enum TRAVEL_MODE {
 }
 
 model UserResponse {
-  id String @id @default(uuid())
+  id                       String                  @id @default(uuid())
+  contingentStrength       Int
+  totalContingentMale      Int
+  totalContingentFemale    Int
 
-  contingentStrength    Int
-  totalContingentMale   Int
-  totalContingentFemale Int
-
-  arrivalDate   String
-  arrivalTime   String
-  arrivalMode   TRAVEL_MODE
-  departureDate String
-  departureTime String
-  departureMode TRAVEL_MODE
+  arrivalDate              String
+  arrivalTime              String
+  arrivalMode              TRAVEL_MODE
+  departureDate            String
+  departureTime            String
+  departureMode            TRAVEL_MODE
 
   eligibilityCertificatesUrl String
   CurriculumVitaeUrl         String
 
-  totalAmount Int
+  totalAmount              Int
+  transactionNumber        String
+  transactionPhotoUrl      String
 
-  transactionNumber   String
-  transactionPhotoUrl String
-
-  ContingentInCharge   ContingentInCharge[]
-  ParticipationDetails ParticipationDetails[]
-  User                 User?
+  ContingentInCharge       ContingentInCharge[]  
+  ParticipationDetails     ParticipationDetails[] 
+  User                     User?
 }
 
 enum GENDER {
@@ -58,14 +57,14 @@ enum GENDER {
 }
 
 model ContingentInCharge {
-  id             String        @id @default(uuid())
+  id             String          @id @default(uuid())
   name           String
   email          String
   mobile         String
   gender         GENDER
   address        String
   photoUrl       String
-  UserResponse   UserResponse? @relation(fields: [userResponseId], references: [id])
+  UserResponse   UserResponse?   @relation(fields: [userResponseId], references: [id])
   userResponseId String?
 }
 
@@ -78,7 +77,7 @@ enum EVENT_TYPE {
 }
 
 model ParticipationDetails {
-  id                  String     @id @default(uuid())
+  id                  String           @id @default(uuid())
   eventType           EVENT_TYPE
   event               String
   name                String
@@ -87,6 +86,6 @@ model ParticipationDetails {
   modeOfParticipation String
   photoUrl            String
 
-  UserResponse   UserResponse? @relation(fields: [userResponseId], references: [id])
-  userResponseId String?
+  UserResponse        UserResponse?    @relation(fields: [userResponseId], references: [id])
+  userResponseId      String?
 }
