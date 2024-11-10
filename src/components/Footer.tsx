@@ -4,7 +4,7 @@ import { BsTelephone } from "react-icons/bs";
 
 export const Footer = () => {
   return (
-    <footer className="bg-custom-green">
+    <footer className="bg-gray-600">
       <div className="m-auto flex flex-wrap justify-around gap-4 py-4 text-lg text-white md:max-w-7xl">
         <div className="flex items-center justify-center gap-2">
           <HiOutlineMail size={20} />
@@ -16,7 +16,7 @@ export const Footer = () => {
         </div>
         <div className="flex items-center justify-center gap-2">
           <HiOutlineLocationMarker size={20} />
-          <span className="text-center text-sm sm:text-md">
+          <span className="sm:text-md text-center text-sm">
             Kalinga Institute of Industrial Technology (KIIT), Bhubaneswar.
           </span>
         </div>

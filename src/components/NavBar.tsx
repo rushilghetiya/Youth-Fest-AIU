@@ -16,7 +16,7 @@ export const NavBar = ({ handleContactClick, handleEventsClick }: Props) => {
   const router = useRouter();
 
   return (
-    <div className="z-[100] m-auto flex items-center justify-between py-8 px-4 md:max-w-7xl">
+    <div className=" m-auto flex items-center justify-between py-8 px-4 md:max-w-7xl">
       <div className="relative h-[85px] w-[150px] cursor-pointer">
         <Image
           src="https://s3-alpha-sig.figma.com/img/a0a9/6dd1/683a06538d5745deef0256084da2741e?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PsrQJ6siV2-mLH3Cf6G6iDYdbxKcvztw-CTXrHCHJwLVEnl2p9nSwSoAwCDo333jPFx5k1hwQ~RJXQMFaEKG~OZ49SIEMjbTy5A~9gsCtDdmJmQhNxZSQ3Zp-AYb~ZKrchz23P3yhkEkaocXbz4miZUjvU2~Yb1vNT4krzVab2yYzNhvvDFGZNGQfKlU8TBeKESaFzfoc~6amBL1e77~Tbut-AxKgzWLu1jcNud6FdZXIKfj~ekpDD1FxbJlgmUiYHtCdNfpyhjrgHCiaxhE0sqQuW2ckB3ue2KqKo2C~ucWUR9A8nwKv11573osVPyRFY5cvBIQh9ILiXg2DNNpfg__"
@@ -26,15 +26,15 @@ export const NavBar = ({ handleContactClick, handleEventsClick }: Props) => {
           onClick={() => router.push("/")}
         />
       </div>
-      <div className="hidden md:block">
+      <div className="z-[100] hidden md:block">
         <span
-          className="mr-8 cursor-pointer text-lg font-bold text-custom-purple"
+          className="text-custom-purple mr-8 cursor-pointer text-lg font-bold"
           onClick={() => router.push("/about")}
         >
           About
         </span>
         <span
-          className="mr-8 cursor-pointer text-lg font-bold text-custom-purple"
+          className="text-custom-purple mr-8 cursor-pointer text-lg font-bold"
           onClick={() => {
             if (handleEventsClick) {
               handleEventsClick();
@@ -47,7 +47,7 @@ export const NavBar = ({ handleContactClick, handleEventsClick }: Props) => {
         </span>
         <Menu shadow="md" width={200}>
           <Menu.Target>
-            <span className="mr-8 cursor-pointer text-lg font-bold text-custom-purple">
+            <span className="text-custom-purple mr-8 cursor-pointer text-lg font-bold">
               Download
             </span>
           </Menu.Target>
@@ -87,7 +87,7 @@ export const NavBar = ({ handleContactClick, handleEventsClick }: Props) => {
           </Menu.Dropdown>
         </Menu>
         <span
-          className="mr-8 cursor-pointer text-lg font-bold text-custom-purple"
+          className="text-custom-purple mr-8 cursor-pointer text-lg font-bold"
           onClick={() => {
             if (handleContactClick) {
               handleContactClick();
@@ -98,8 +98,8 @@ export const NavBar = ({ handleContactClick, handleEventsClick }: Props) => {
         >
           Contact
         </span>
-        {/* <span
-          className={`mr-8 cursor-pointer rounded-full bg-custom-purple px-6 py-3 text-lg font-bold text-white`}
+        <span
+          className={`bg-custom-purple mr-8 cursor-pointer rounded-full px-6 py-3 text-lg font-bold text-white`}
           onClick={() => {
             if (isAuth) {
               router.push("/dashboard");
@@ -109,11 +109,11 @@ export const NavBar = ({ handleContactClick, handleEventsClick }: Props) => {
           }}
         >
           {isAuth ? "Dashboard" : "Login"}
-        </span> */}
+        </span>
       </div>
       <GiHamburgerMenu
         size={30}
-        className="cursor-pointer md:hidden"
+        className="z-[100] cursor-pointer md:hidden"
         onClick={() => {
           setOpenMenu(!openMenu);
         }}
@@ -129,20 +129,20 @@ export const NavBar = ({ handleContactClick, handleEventsClick }: Props) => {
       >
         <div className="flex h-full flex-col items-center justify-center gap-16">
           <span
-            className="mr-8 cursor-pointer text-lg font-bold text-custom-purple"
+            className="text-custom-purple mr-8 cursor-pointer text-lg font-bold"
             onClick={() => router.push("/about")}
           >
             About
           </span>
           <span
-            className="mr-8 cursor-pointer text-lg font-bold text-custom-purple"
+            className="text-custom-purple mr-8 cursor-pointer text-lg font-bold"
             onClick={() => router.push("/?tab=events")}
           >
             Events
           </span>
           <Menu shadow="md" width={200}>
             <Menu.Target>
-              <span className="mr-8 cursor-pointer text-lg font-bold text-custom-purple">
+              <span className="text-custom-purple mr-8 cursor-pointer text-lg font-bold">
                 Download
               </span>
             </Menu.Target>
@@ -182,13 +182,13 @@ export const NavBar = ({ handleContactClick, handleEventsClick }: Props) => {
             </Menu.Dropdown>
           </Menu>
           <span
-            className="mr-8 cursor-pointer text-lg font-bold text-custom-purple"
+            className="text-custom-purple mr-8 cursor-pointer text-lg font-bold"
             onClick={() => router.push("/?tab=contact")}
           >
             Contact
           </span>
-          {/* <span
-            className={`mr-8 cursor-pointer rounded-full bg-custom-purple px-6 py-3 text-lg font-bold text-white`}
+          <span
+            className={`bg-custom-purple mr-8 cursor-pointer rounded-full px-6 py-3 text-lg font-bold text-white`}
             onClick={() => {
               if (isAuth) {
                 router.push("/dashboard");
@@ -198,7 +198,7 @@ export const NavBar = ({ handleContactClick, handleEventsClick }: Props) => {
             }}
           >
             {isAuth ? "Dashboard" : "Login"}
-          </span> */}
+          </span>
         </div>
       </Drawer>
     </div>
