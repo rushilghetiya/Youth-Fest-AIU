@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inria: ['"Inria Serif"', "serif"],
+        poppins: ['"Poppins"', "sans-serif"],
       },
       textShadow: {
         sm: "1px 1px 2px rgba(0, 0, 0, 0.5)",
@@ -26,6 +27,9 @@ module.exports = {
           secondary: "#006A67",
           golden: "#be994a",
           tertiary: "#97c0bc",
+        },
+        footer: {
+          bg: "#2E6F40", // Your new footer background color
         },
       },
       backgroundImage: {
