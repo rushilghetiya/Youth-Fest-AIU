@@ -1,16 +1,6 @@
 import React from "react";
-import {
-  HiOutlineMail,
-  HiOutlineLocationMarker,
-  HiMail,
-  HiLocationMarker,
-} from "react-icons/hi";
-import {
-  BsMailbox,
-  BsMailbox2,
-  BsTelephone,
-  BsTelephoneFill,
-} from "react-icons/bs";
+import { HiOutlineMail, HiLocationMarker } from "react-icons/hi";
+import { BsTelephoneFill } from "react-icons/bs";
 
 export const Footer = () => {
   return (

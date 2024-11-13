@@ -6,8 +6,11 @@ import { NavBar } from "../components/NavBar";
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { event } from "../constants/data";
+import CountdownTimer from "../components/Timer";
 
 const Home: NextPage = () => {
+  const targetDate = new Date("2024-12-25T00:00:00"); // Set your target date here
+
   const refEvents = useRef<null | HTMLDivElement>(null);
   const refContact = useRef<null | HTMLDivElement>(null);
 
@@ -30,13 +33,15 @@ const Home: NextPage = () => {
   }, [router]);
 
   return (
-    <div className="min-h-screen bg-custom-cream font-inria uppercase text-font-primary">
+    <div className="min-h-screen bg-custom-cream font-inria text-font-primary">
       <div className="absolute inset-0 bg-gradient-to-b from-custom-blue via-custom-cream to-custom-cream" />
 
       <NavBar
         handleEventsClick={handleEventsClick}
         handleContactClick={handleContactClick}
       />
+      <CountdownTimer targetDate={targetDate} />
+      <div className="text-black">Hello</div>
       <div className="relative m-auto flex flex-col px-4 md:max-w-6xl">
         <h1 className="mb-6 text-center text-3xl font-thin text-shadow-right-sm md:text-5xl">
           38th AIU Inter-University South Zone Youth Festival
