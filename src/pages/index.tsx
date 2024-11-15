@@ -8,9 +8,21 @@ import { useRouter } from "next/router";
 import { event } from "../constants/data";
 import CountdownTimer from "../components/Timer";
 
-const Home: NextPage = () => {
-  const targetDate = new Date("2024-12-25T00:00:00"); // Set your target date here
+// const TestPage: NextPage = () => {
+//   return (
+//     <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-sky-100 to-sky-200">
+//       {/* <h1 className="mb-8 text-3xl font-bold text-[#1e3a8a]">
+//         38th AIU INTER-UNIVERSITY SOUTH ZONE YOUTH FESTIVAL
+//       </h1> */}
+//       <CountdownTimer />
+//       {/* <p className="mt-8 text-lg text-[#1e3a8a]">26th - 30th December 2024</p> */}
+//     </div>
+//   );
+// };
 
+// export default TestPage;
+
+const Home: NextPage = () => {
   const refEvents = useRef<null | HTMLDivElement>(null);
   const refContact = useRef<null | HTMLDivElement>(null);
 
@@ -40,7 +52,7 @@ const Home: NextPage = () => {
         handleEventsClick={handleEventsClick}
         handleContactClick={handleContactClick}
       />
-      <CountdownTimer targetDate={targetDate} />
+      <CountdownTimer />
       <div className="text-black">Hello</div>
       <div className="relative m-auto flex flex-col px-4 md:max-w-6xl">
         <h1 className="mb-6 text-center text-3xl font-thin text-shadow-right-sm md:text-5xl">
