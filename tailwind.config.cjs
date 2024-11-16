@@ -21,6 +21,8 @@ module.exports = {
         custom: {
           blue: CUSTOM_BLUE,
           cream: CUSTOM_CREAM,
+          dropdown_blue: "#035481",
+          dropdown_hover: "#63E9AA",
         },
         font: {
           primary: "#005b8e",
