@@ -66,7 +66,10 @@ const Home: NextPage = () => {
       <div className="relative m-auto flex flex-col px-4 md:max-w-6xl">
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-center md:gap-4">
           {/* Main Image - Larger */}
-          <div className="relative h-full w-full md:h-[600px] lg:h-[800px]">
+          <div
+            className="relative h-full w-full"
+            // style={{ marginTop: "-100px" }} // Moves the component up by 20px
+          >
             <RotatingFlowers
               rotatingImage="flower_2.png"
               staticImage="Group 1.png"
@@ -76,62 +79,80 @@ const Home: NextPage = () => {
           </div>
 
           {/* Text and Countdown */}
-          <div className="relative z-20 pb-0">
-            <CountdownTimer targetDate="2024-12-26T00:00:00" />
-            <h1 className="mb-0 text-center text-3xl font-thin text-shadow-right-sm md:text-5xl">
-              38th AIU Inter-University South Zone Youth Festival
+          <div className=" relative z-20 ml-2 pb-0">
+            <CountdownTimer
+              targetDate="2024-12-26T00:00:00"
+              size={{ width: "50px", height: "70px" }}
+            />
+            <h1
+              className="mb-0 text-center font-poppins text-2xl font-bold text-shadow-right-sm md:text-4xl"
+              style={{
+                maxWidth: "100%",
+                lineHeight: "1.2em",
+                wordBreak: "break-word",
+              }}
+            >
+              38th AIU Inter-University South&nbsp;Zone <br /> Youth Festival
             </h1>
-            <h2 className="text-1xl mt-0 text-center font-bold">
+
+            <h2 className="text-1xl mt-0 text-center font-inter font-bold">
               26th - 30th December 2024
             </h2>
-            <div className="mb-8 mt-12 flex w-full flex-col gap-6 text-center md:flex-row md:justify-between">
+            <div className="mb-8 mt-12 flex w-full flex-col gap-6 text-center md:flex-row md:justify-center">
               {/* Hosted By and Under the Aegis of Section */}
               <div className="flex flex-col items-center">
-                <div className="h-fit whitespace-nowrap rounded-3xl px-6 py-2 font-light tracking-widest text-black text-shadow-right-sm md:text-2xl">
+                <div className="h-fit whitespace-nowrap rounded-3xl px-6 py-2 font-instrument_sans font-bold tracking-widest text-black text-shadow-right-sm md:text-2xl">
                   Hosted By
                 </div>
                 <div className="relative mt-0 h-[120px] w-[120px] cursor-pointer md:h-[150px] md:w-[150px]">
                   <Image
-                    src="https://s3-alpha-sig.figma.com/img/ada6/05f4/368dcd56539ea345b48c9f9484ce3474?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=et-2hw9ClNI6rPwDGWBkZMcJCdxyKUxWzGhhc3nAObFwu8~EQiTW9ItikQuBSNcqEOMg715n0jJAp8YKO3M~i3CuAN5LiOQpqZAc3rb8unMW8YpDFjyj43DkfpvRCAKJfI~XUQ4UT2W4liw1T8aH8M3~tfX83Sue3RwCfxARuwpTvQ0tnQ8wvnDSXqApv9e74EXYh7X0gpSWTjLiIgnevIEh-FMzTkah4Kzd1Lk5vmrzmbhwu22ggjCb6xBguG63zqe4uaqfpdZtPI6QRRvHh5Opp-JCURomicslPDvjbZGDzN2Ah7TlMYor-A-eLKWGETXH~KaJ699R6mAXVOogLw__"
+                    src="/srm_logo.png"
                     alt="Hosted By Logo"
                     fill
                     className="absolute object-contain"
                   />
                 </div>
+                <div className="md:text-1xl h-fit whitespace-nowrap rounded-3xl px-6 py-2 font-instrument_sans font-bold tracking-widest text-black text-shadow-right-sm">
+                  SRM institute of science and technoglogy{" "}
+                </div>
               </div>
 
               {/* Under the Aegis of Section */}
               <div className="flex flex-col items-center">
-                <div className="h-fit whitespace-nowrap rounded-3xl px-6 py-2 font-light tracking-widest text-black text-shadow-right-sm md:text-2xl">
+                <div className="h-fit whitespace-nowrap rounded-3xl px-6 py-2 font-instrument_sans font-bold tracking-widest text-black text-shadow-right-sm md:text-2xl">
                   Under the Aegis of
                 </div>
-                <div className="relative mt-4 h-[120px] w-[120px] cursor-pointer md:h-[150px] md:w-[150px]">
+                <div className="relative mt-4 h-[120px] w-[120px] cursor-pointer md:h-[135px] md:w-[135px]">
                   <Image
-                    src="https://s3-alpha-sig.figma.com/img/56e4/9f2b/17a2c93895f6702af1aa72d9df4c8585?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oYslaisSKxWXPrjc3jYFdiBt6yhpVglroiHV8cFeWhahaIzLdVYUB-Tj11JD2t2JyqWVeiAhPVjRbyxWui0siGzlK0WeLNlL675LMvWjIhon4WCAdwNUiJ8KpsP5AED9VUPpRQGMpvRytjiqRVPQIyNlv90GJ3jsK-d5Ohtz8GlSKFdWLRb6GJ7B~w7Txcbpc~FGFGflOwwwWYsUN-JDz6y3prMU0YCxvMNszTlPOp5DsaMqIUNDULWsG1rZEDHI3H3qLXVizJl76Bs3odn7HDWaFoz1ZS2RKvBuanbEqx2nX32JZeyseR9YJfggC4ogljdCfAj7LKFWnJtvbcj6nQ__"
+                    src="/aiu_logo.png"
                     alt="Under the Aegis of Logo"
                     fill
                     className="absolute object-contain"
                   />
                 </div>
+                <div className="md:text-1xl h-fit whitespace-nowrap rounded-3xl px-6 py-2 font-instrument_sans font-bold tracking-widest text-black text-shadow-right-sm">
+                  Association of Indian Universities, New Delhi{" "}
+                </div>
               </div>
-              {/* </div> */}
             </div>
           </div>
         </div>
       </div>
+
       {/* Events Section */}
       <div
         className="bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://s3-alpha-sig.figma.com/img/ac3f/805b/f5564d183bb3e99a54b84854b73c7c80?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=j8xYP4cUrfgwj0pKW6eFjHGiN7S2lDvOV13paQgBbZXPuCld-QAIfuPQ6Txgpz5JLOzdV0zTgwecGo61ss9CNHMVFigt7N-xybEvKIfmdneVTkx~FA09WMsii264gYN3~sqV~cGGw6L6~tQ2P8sNAv5C9KEir2h7COTlO5~I9m2ziczwFfQ5zfmsg8eS47heLVFgVOYCyDGORMHjQgfAfvRl6wx67VvxU95Ugsa1wF6J-EWuFk533M4L42ycyJdtDr6Kw6IIvrNy70kW6zgWTuMD3YHZrwfDGD4tLvE5-ZtkyxI8BssUTXvFaWox-3ZJ61tmFIoWqcVHV5~FSNmvzw__')`,
-          opacity: 0.2,
+          backgroundImage: "url('/dance_bg.png')", // Correct path with leading slash
+          minHeight: "400px", // Increase the minimum height of the background section
         }}
       >
         <div
           className="m-auto flex flex-col items-center py-12 px-4 md:max-w-7xl"
           ref={refEvents}
         >
-          <span className="mb-8 text-3xl font-bold text-custom-cream md:text-4xl">
+          {/* Add top padding to avoid overlap */}
+          <span className="mb-8 pt-12 text-3xl font-bold text-black md:text-4xl">
             EVENTS
           </span>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -168,10 +189,9 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+
       {/* Footer */}
-      <div className="bg-custom-blue py-8 text-center text-white">
-        <p>Footer content here</p>
-      </div>
+      <Footer />
     </div>
   );
 };
