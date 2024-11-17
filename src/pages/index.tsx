@@ -101,7 +101,7 @@ const Home: NextPage = () => {
             <div className="mb-8 mt-12 flex w-full flex-col gap-6 text-center md:flex-row md:justify-center">
               {/* Hosted By and Under the Aegis of Section */}
               <div className="flex flex-col items-center">
-                <div className="h-fit whitespace-nowrap rounded-3xl px-6 py-2 font-instrument_sans font-bold tracking-widest text-black text-shadow-right-sm md:text-2xl">
+                <div className="h-fit whitespace-nowrap rounded-3xl px-16 py-2 font-instrument_sans font-bold tracking-widest text-black text-shadow-right-sm md:text-2xl">
                   Hosted By
                 </div>
                 <div className="relative mt-0 h-[120px] w-[120px] cursor-pointer md:h-[150px] md:w-[150px]">
@@ -112,8 +112,9 @@ const Home: NextPage = () => {
                     className="absolute object-contain"
                   />
                 </div>
-                <div className="md:text-1xl h-fit whitespace-nowrap rounded-3xl px-6 py-2 font-instrument_sans font-bold tracking-widest text-black text-shadow-right-sm">
-                  SRM institute of science and technoglogy{" "}
+                <div className="md:text-1xl h-fit whitespace-normal rounded-3xl px-2 py-4 font-instrument_sans font-bold tracking-widest text-black text-shadow-right-sm">
+                  <span className="block">SRM institute of science</span>
+                  <span className="block">and technology</span>
                 </div>
               </div>
 
@@ -130,8 +131,13 @@ const Home: NextPage = () => {
                     className="absolute object-contain"
                   />
                 </div>
-                <div className="md:text-1xl h-fit whitespace-nowrap rounded-3xl px-6 py-2 font-instrument_sans font-bold tracking-widest text-black text-shadow-right-sm">
-                  Association of Indian Universities, New Delhi{" "}
+                <div className="md:text-1xl h-fit whitespace-normal rounded-3xl px-0 py-2 font-instrument_sans font-bold tracking-widest text-black text-shadow-right-sm">
+                  <div className="md:text-1xl h-fit whitespace-normal rounded-3xl px-0 py-2 font-instrument_sans font-bold tracking-widest text-black text-shadow-right-sm">
+                    <span className="block">Association of</span>
+                    <span className="block">
+                      Indian Universities, New Delhi
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
