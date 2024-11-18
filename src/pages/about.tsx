@@ -5,14 +5,14 @@ import Image from "next/image";
 const About = () => {
   return (
     <div className="min-h-screen overflow-hidden bg-custom-cream">
-      <NavBar />
-      <div className="m-auto p-4 md:max-w-7xl mb-12">
+      <NavBar menuItemColor="text-custom-blue" />
+      <div className="m-auto mb-12 p-4 md:max-w-7xl">
         <main className="flex flex-col gap-8">
           <div>
-            <h1 className="text-3xl font-bold text-custom-purple">
+            <h1 className="text-custom-purple text-3xl font-bold">
               About Kriti Utsav
             </h1>
-            <p className="font-semibold text-custom-purple">
+            <p className="text-custom-purple font-semibold">
               “KRITI UTSAV”, the 36th Inter University East Zone Youth Festival
               is a 5-day event being organized by KIIT Deemed to be University,
               Bhubaneswar in collaboration with the Association of Indian
@@ -32,7 +32,7 @@ const About = () => {
                   width={65}
                   height={50}
                 />
-                <span className="text-xl font-extrabold text-custom-purple">
+                <span className="text-custom-purple text-xl font-extrabold">
                   KALINGA INSTITUTE OF INDUSTRIAL TECHNOLOGY (KIIT)
                 </span>
               </div>
@@ -109,7 +109,7 @@ const About = () => {
                   width={55}
                   height={50}
                 />
-                <span className="text-xl font-extrabold text-custom-purple">
+                <span className="text-custom-purple text-xl font-extrabold">
                   KALINGA INSTITUTE OF SOCIAL SCIENCES (KISS)
                 </span>
               </div>
@@ -157,11 +157,11 @@ const About = () => {
                   className="rounded-3xl"
                 />
                 <div className="">
-                  <span className="text-2xl font-bold text-custom-purple">
+                  <span className="text-custom-purple text-2xl font-bold">
                     Dr. Achyuta Samanta
                   </span>
                   <br />
-                  <span className="text-md font-bold text-custom-purple">
+                  <span className="text-md text-custom-purple font-bold">
                     Founder KIIT & KISS, M.P Lok Sabha
                   </span>
                   <br />
@@ -200,7 +200,7 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <p className="mt-6 text-custom-purple">
+              <p className="text-custom-purple mt-6">
                 As a social reformer, he has been propagating “Art of Giving”
                 (philosophy of life), a concept aimed at bringing peace and
                 happiness around the globe, Kanyakiran to promote zero tolerance

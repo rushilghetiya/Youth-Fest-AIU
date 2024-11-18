@@ -56,12 +56,13 @@ const Home: NextPage = () => {
   }, [router]);
 
   return (
-    <div className="min-h-screen bg-custom-cream font-inria text-font-primary">
+    <div className="min-h-screen overflow-hidden bg-custom-cream font-inria text-font-primary">
       <div className="absolute inset-0 bg-gradient-to-b from-custom-blue via-custom-cream to-custom-cream" />
 
       <NavBar
         handleEventsClick={handleEventsClick}
         handleContactClick={handleContactClick}
+        menuItemColor="text-white"
       />
       <div className="relative m-auto flex flex-col px-4 md:max-w-6xl">
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-center md:gap-4">
@@ -106,7 +107,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="relative mt-0 h-[120px] w-[120px] cursor-pointer md:h-[150px] md:w-[150px]">
                   <Image
-                    src="/srm_logo.png"
+                    src="/srm_logo_blue.png"
                     alt="Hosted By Logo"
                     fill
                     className="absolute object-contain"

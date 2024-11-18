@@ -4,7 +4,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 
 export const Footer = () => {
   return (
-    <footer className="bg-footer-bg">
+    <footer id="footer" className="bg-footer-bg">
       <div className="m-auto flex flex-wrap justify-around gap-4 py-4 font-poppins text-sm font-semibold text-black md:max-w-7xl">
         <div className="flex items-center justify-center gap-2">
           <HiOutlineMail size={20} />
